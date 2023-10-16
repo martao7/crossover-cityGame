@@ -14,11 +14,6 @@ export default function Footer() {
     <>
       <div className="footer">
         <div class="social-container">
-          <h5>Follow us:</h5>
-
-          <a href="https://www.youtube.com/c/blabla" className="youtube social">
-            <FontAwesomeIcon icon={faYoutube} size="2x" />
-          </a>
           <a
             href="https://www.facebook.com/blabla/"
             className="facebook social"
