@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 
 export default function FinalPage() {
   return (
@@ -8,9 +9,11 @@ export default function FinalPage() {
         <div className="scorePict">
           <h2>Your score:</h2>
           {/* //score */}
-          <h4>You got % right. /n Well done!</h4>
+          <h4>You got % right. Well done! </h4>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
