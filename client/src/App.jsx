@@ -1,14 +1,20 @@
-import './App.css'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import CreateUser from "./Pages/CreateUser";
 
 function App() {
-  <Router>
-    <Routes>
-  <Route />
-  <Route />
-  <Route />
-    </Routes>
-  </Router>
+  return (
+    <>
+      {/* <Router> */}
+      <Routes>
+        <Route path="/" element={<CreateUser />} />
+        <Route />
+        <Route />
+      </Routes>
+      {/* </Router> */}
+      {/* <EnterYourNameModule /> */}
+    </>
+  );
 }
 
-export default App
+export default App;
