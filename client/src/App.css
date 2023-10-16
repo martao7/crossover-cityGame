@@ -71,6 +71,12 @@ cursor: pointer;
         align-self: center;
         cursor: pointer;
         }
+        .qP1_btn:focus,
+        .qP2_btn:focus,
+        .qP3_btn:focus {
+            border-color: #8933c3; 
+            outline: none;
+        }
 
 .qP-submit{
 width: 40vw;
