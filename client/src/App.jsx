@@ -1,24 +1,21 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
+import { Route, Routes } from "react-router-dom";
+import CreateUser from "./Pages/CreateUser";
 import QuizPage from "./Pages/QuizPage";
-import FinalPage from "./Pages/FinalPage";
-import Leaderboard from "./Pages/Leaderboard"
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Quiz" element={<QuizPage />} />
-          <Route path="/Final" element={<FinalPage />} />
-          <Route path="/Leaderboard" element={<Leaderboard />} />
-        </Routes>
-      </Router>
+      {/* <Router> */}
+      <Routes>
+        <Route path="/" element={<CreateUser />} />
+        <Route path="/game" element={<QuizPage />} />
+        <Route />
+      </Routes>
+      {/* </Router> */}
+      {/* <EnterYourNameModule /> */}
     </>
   );
-
 }
 
 export default App;
