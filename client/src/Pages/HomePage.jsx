@@ -26,20 +26,6 @@ export default function HomePage() {
           <img src="https://picture" width="100%" />
         </div>
 
-        <div className="usersName">
-          <p>Put your name here:</p>
-          <CreateGamer />
-          {/* <form onSubmit={""}>
-            <input id="name" type="text" placeholder="name" value="" />
-            </form> */}
-          <div className="playButton">
-            <p>...and press:</p>
-            <button onClick id="playButton">
-              PLAY
-            </button>
-          </div>
-        </div>
-
         <div classname="gameRulesExpl">
           <button onClick={openPopup} id="gameRulesButton">
             Game rules explanation
@@ -52,6 +38,20 @@ export default function HomePage() {
           ready, click on the OK button to go to the next page. Your total score you will see at the end of the game. 
           Good luck and have fun! :) "
           />
+        </div>
+
+        <div className="usersName">
+          <p>Put your name here:</p>
+          <CreateGamer />
+          {/* <form onSubmit={""}>
+            <input id="name" type="text" placeholder="name" value="" />
+            </form> */}
+          <div className="playButton">
+            <p>...and press:</p>
+            <button onClick id="playButton">
+              PLAY
+            </button>
+          </div>
         </div>
       </div>
     </>
