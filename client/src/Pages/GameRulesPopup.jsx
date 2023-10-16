@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 
-Modal.setAppElement("#root"); // Wählen Sie die Wurzel-Element-ID Ihrer Anwendung
+Modal.setAppElement("#root");
 //npm install react-modal
 
 export default function GameRulesPopup({ isOpen, onClose, text }) {
