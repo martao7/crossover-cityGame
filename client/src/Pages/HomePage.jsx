@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CreateGamer from "./CreateGamer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import GameRulesPopup from "./GameRulesPopUp";
 
 export default function HomePage() {
@@ -18,6 +18,7 @@ export default function HomePage() {
 
   return (
     <>
+    <NavLink to="/leaderboard">Leaderboard</NavLink>
       <div className="homepage">
         <h1>CityQuiz</h1>
         <p>What city is it?</p>
