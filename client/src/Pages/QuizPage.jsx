@@ -1,50 +1,56 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function QuizPage() {
-    const [clickedButton, setClickedButton] = useState(null);
 
-    const handleChange = (buttonIndex) => {
-        setClickedButton(buttonIndex);
-    };
+    const [gameData, setGameData] = useState([]);
 
-    const qPbuttonStyle = [
-        {
-            className: 'qP1_btn',
-            borderColor: '#0000',
-            text:'London',
-        },
-        {
-            className: 'qP2_btn',
-            borderColor: '#0000',
-            text: 'London',
-        },
-        {
-            className: 'qP3_btn',
-            borderColor: '#0000',
-            text: 'London',
+    useEffect(() => {
+        const fetchCityData = async () => {
+            try {
+                const response = await fetch('https://city-game.onrender.com/game');
+                if (response.ok) {
+                    const data = await response.json();
+                    setGameData(data.cities);
+                    
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
-        },
-    ];
-
+        fetchCityData();
+    }, []);
+    console.log(gameData);
     return (
-        <div className="qP_wrap">
+        <>
+        
+        {gameData?.map((city, index) => 
+            
+        <div className="qP_wrap" key={index}>
             <img
                 className="qP-image"
-                src='https://images.pexels.com/photos/13940670/pexels-photo-13940670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                src={`${city?.url}`}
                 alt=""
             />
-            {qPbuttonStyle.map((button, index) => (
                 <button
-                    key={index}
-                    className={`qP_btn ${button.className}`}
+                    className='qP1_btn'
                     type="submit"
-                    onClick={() => handleChange(index)}
-                    style={{
-                        borderColor: clickedButton === index ? '#8933c3' : button.borderColor,
-                    }}
-                >{button.text}</button>
-            ))}
+                    
+                > {city?.correct_answer} </button>
+                                <button
+                    className='qP2_btn'
+                    type="submit"
+                    
+                >{city?.additional_answer1}</button>
+                                <button
+                    className='qP3_btn'
+                    type="submit"
+                    
+                > {city?.additional_answer2} </button>
+            
             <button className="qP-submit">Next Level</button>
-        </div>
-    );
+        </div>)} 
+
+        </> 
+    )
 }
