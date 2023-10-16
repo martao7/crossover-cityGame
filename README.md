@@ -9,8 +9,5 @@ This application displays a game with cities fetched from a backend server.
 MongoDB connection settings(.env file):
 
 ```
-DB_HOST=server
-DB_USER=username
-DB_PASSWORD=password
-DB_PORT=5432
+MONGO_URI=mongodb+srv://groblewskip:<password>@cityquiz.ts6ydtk.mongodb.net/
 ```
