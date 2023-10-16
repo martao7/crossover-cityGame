@@ -1,3 +1,4 @@
+
 /* -----------QuizPage----------- */
 body {
     background-color: rgb(206, 203, 203);
@@ -100,3 +101,50 @@ font-size: large;
 
 
 /* -----------QuizPage----------- */
+
+/* ///Martas PART// */
+
+
+
+
+
+
+/* ///social media icons - footer */
+.footer {
+    text-align: center;
+  }
+  .social-container {
+    background: #eee;
+    padding: 25px 50px;
+  }
+  
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+  
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  
+  a.youtube {
+    color: #eb3223;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+  }
+  
+  a.twitter {
+    color: #49a1eb;
+  }
+  
+  a.instagram {
+    color: black;
+  }
+  
+  /* ///end of social media icons - footer */
+
+/* ///end of Martas part// */
+
