@@ -35,7 +35,7 @@ export default function HomePage() {
           <GameRulesPopup
             isOpen={isPopupOpen}
             onClose={closePopup}
-            text=" In this game you should guess the names of the cities they are
+            text="In this game you should guess the names of the cities they are
           presented on the next pages on the photos. Choose the answer, that is your guess of the right name of presented city. When you are
           ready, click on the 'Next Level' button to go to the next page. Your total score you will see at the end of the game. 
           Good luck and have fun! :) "
