@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import CreateUser from "./Pages/CreateUser";
+import QuizPage from "./Pages/QuizPage";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       {/* <Router> */}
       <Routes>
         <Route path="/" element={<CreateUser />} />
-        <Route />
+        <Route path="/game" element={<QuizPage />} />
         <Route />
       </Routes>
       {/* </Router> */}
